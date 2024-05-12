@@ -1,4 +1,4 @@
-# Frontend Developer Course
+# Frontend Developer Practical Course
 
 <p align="center">
   <img src="https://img.shields.io/badge/Curso%20-Finalizado-brightgreen"/>
