@@ -120,14 +120,14 @@ I hope this explanation has helped you understand a little about the development
 <br>
 
 # LAYOUT AND COMPONENTS
-  ## [Identify your Project Screens]()
+  ## [Identify your Project Screens](https://scene.zeplin.io/project/60afeeed20af1378ed046538)
 Web layout or web design consists of transforming a graphic design —a sketch— (made by UX/UI in Figma or Sketch) into a functional interface in terms of programming that a specific browser or device understands.
 
 <p align="center">
-  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/shopping-cart.png?raw=true" width= "75%" alt="Shopping Cart">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/shopping-cart.png?raw=true" width= "40%" alt="Shopping Cart">
 </p>
 
-The design area provided us with the project sketch in Figma.
+The design area provided us with the project sketch in [Figma](https://scene.zeplin.io/project/60afeeed20af1378ed046538).
 We can identify the views of:
 
   * Home
@@ -139,7 +139,7 @@ We can identify the views of:
   * Menu
 
 <p align="center">
-  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/project.png?raw=true" width= "75%" alt="Project">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/project.png?raw=true" width= "99%" alt="Project">
 </p>
 
 From here, you can see how the interaction between the different screens works.
@@ -152,7 +152,87 @@ From here, you can see how the interaction between the different screens works.
   <br>
   <br>
 
-  ## Design System, Assets and CSS Variables
+  ## [Design System, Assets and CSS Variables]()
+We're starting to work! We'll follow a design system that will allow us to achieve a uniform project. For this, **we'll declare variables in CSS** with the colors we'll use and organize icons and logos into folders.
+
+[Shopify Blog](https://polaris.shopify.com/design/colors)
+
+<br>
+
+  ### What's the purpose of a design system?
+The main advantage of implementing a design system is that it simplifies the tasks of designers and developers in the creation process. It also speeds up decision-making among teams.
+
+<br>
+
+  ### CSS Variables
+In CSS, we call variables to custom properties.
+They contain specific values that can be reused many times in a document.
+
+They're established using double dashes notation
+```
+--variable-name: value;
+```
+
+They're accessed using the ``var()`` function
+```
+property: var(--variable-name);
+```
+Normally, we declare them inside the ``:root`` selector so their scope is global.
+
+Our project would look like this:
+```
+:root {
+    --black:#000000;
+    --white: #FFFFFF;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --dark: #232830;
+    --hospital-green: #ACD9B2;
+}
+```
+The scope of CSS variables declared using another pseudo-class will be limited to the selector within which they are declared. Unlike variables declared within the :root pseudo-class, which have global scope and can be accessed anywhere in the document, variables declared within other selectors have a more limited scope.
+
+For example, if you declare variables within a specific selector like .container, those variables will only be accessible within elements that are descendants of the .container class. They won't be available globally throughout the document.
+
+Here's an example:
+```
+.container {
+    --primary-color: blue;
+}
+
+.element {
+    color: var(--primary-color); /* This will work */
+}
+
+.another-element {
+    color: var(--primary-color); /* This won't work */
+}
+```
+In this example, the --primary-color variable is declared within the .container selector. Therefore, it can be used within any element that is a descendant of .container, such as .element. However, it cannot be used outside of that scope, as demonstrated by .another-element.
+
+
+You can also name your variables according to their function.
+Examples: ``--background-color``, ``--primary-color``, etc.
+
+<br>
+
+  ### Fonts
+We'll look for the fonts proposed by the design in [Google Fonts](https://fonts.google.com/specimen/Quicksand)
+We place the links inside the HTML head tag
+```
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+```
+
+Inside the style tag, we tell CSS to implement it
+```
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+```
+
 
 <br>
 <br>
