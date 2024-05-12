@@ -124,7 +124,7 @@ I hope this explanation has helped you understand a little about the development
 Web layout or web design consists of transforming a graphic design —a sketch— (made by UX/UI in Figma or Sketch) into a functional interface in terms of programming that a specific browser or device understands.
 
 <p align="center">
-  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/shopping-cart.png?raw=true" width= "40%" alt="Shopping Cart">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/shopping-cart.png?raw=true" width= "35%" alt="Shopping Cart">
 </p>
 
 The design area provided us with the project sketch in [Figma](https://scene.zeplin.io/project/60afeeed20af1378ed046538).
@@ -233,18 +233,158 @@ body {
 }
 ```
 
-
 <br>
 <br>
 <br>
 
 # RESPONSIVE LAYOUT: AUTHENTICATION SCREENS
-  ## Create New Password: HTML
+  ## [Create New Password: HTML](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/resources/classes/clase1.html)
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <br>
-  <br>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
 
-  ## Create New Password: CSS
+  <title>Yard Sale</title>
+
+</head>
+<body>
+  <div class="login">
+    <div class="form-container">
+      <img src="../resources/logos/logo_yard_sale.svg" alt="logo" class="logo">
+
+      <h1 class="title">Create a new password</h1>
+      <p class="subtitle">Enter a new password for your account</p>
+
+      <form action="/" class="form">
+
+        <label for="password" class="label">Password</label>
+        <input type="password" class="input input-password" id='password' placeholder='*********'>
+
+        <label for="password" class="label">Password</label>
+        <input type="password" class="input input-password" id='new-password' placeholder='*********'>
+        
+        <input type="submit" value="Confirm" class='primary-button login-button'>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+```
+
+<br>
+<br>
+
+  ## [Create New Password: CSS](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/resources/classes/clase1.html)
+Now we'll style the HTML for the **"new password"** screen. Design has suggested the following visual for both mobile and desktop. The only exception is that the logo should not be displayed in this latest version.
+
+Which styles will we implement?
+```
+.login {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.form-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 300px;
+}
+.logo {
+  width: 150px;
+  margin-bottom: 48px;
+  justify-self: center;
+  display: none;
+}
+.title {
+  font-size: var(--lg);
+  margin-bottom: 12px;
+  text-align: center;
+}
+.subtitle {
+  color: var(--very-light-pink);
+  font-size: var(--md);
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  font-size: var(--sm);
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.input {
+  background-color: var(--text-input-field);
+  border: none;
+  border-radius: 8px;
+  height: 30px;
+  font-size: var(--md);
+  padding: 6px;
+  margin-bottom: 12px;
+}
+.primary-button {
+  background-color: var(--hospital-green);
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+  width: 100%;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+  height: 50px;
+}
+.login-button {
+  margin-top: 14px;
+  margin-bottom: 30px;
+}
+@media (max-width: 640px) {
+  .logo {
+    display: block;
+  }
+}
+```
+
+<br>
+
+  ### Using Grid Display to Center Elements
+As you can see in our ``.login`` class, with just two lines of code, we can center our content:
+```
+display: grid;
+place-items: center;
+```
+
+The ``place-items`` shorthand property allows you to align elements, both horizontally and vertically, in a container with Grid or Flexbox. That is, it is an abbreviation of the align-items and justify-items properties. If you don't specify the second value, it will use the first for both alignments.
+
+Try different combinations and see what happens:
+
+  * **place-items: center stretch;**
+  * **place-items: center start;**
+  * **place-items: start end;**
+  * **place-items: end center;**
+
+<br>
+
+  ### How to Organize Styles
+One way to do it is according to its purpose. Following the following order:
+
+  * Positioning
+  * Box model
+  * Typography
+  * Visuals
+  * Others
+
+See the detailed explanation [here](https://platzi.com/new-home/clases/2030-mobile-first/32304-estilos-base/).
 
   <br>
   <br>
