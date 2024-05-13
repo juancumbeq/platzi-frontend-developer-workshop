@@ -238,7 +238,7 @@ body {
 <br>
 
 # RESPONSIVE LAYOUT: AUTHENTICATION SCREENS
-  ## [Create New Password: HTML](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/resources/classes/clase1.html)
+  ## [Create New Password: HTML](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/1-create-new-password.html)
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -280,8 +280,12 @@ body {
 <br>
 <br>
 
-  ## [Create New Password: CSS](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/resources/classes/clase1.html)
+  ## [Create New Password: CSS](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/1-create-new-password.html)
 Now we'll style the HTML for the **"new password"** screen. Design has suggested the following visual for both mobile and desktop. The only exception is that the logo should not be displayed in this latest version.
+
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/new-password.png?raw=true" width= "35%" alt="New password">
+</p>
 
 Which styles will we implement?
 ```
@@ -386,23 +390,141 @@ One way to do it is according to its purpose. Following the following order:
 
 See the detailed explanation [here](https://platzi.com/new-home/clases/2030-mobile-first/32304-estilos-base/).
 
-  <br>
-  <br>
+<br>
+<br>
 
   ## Mail sent
+Now we will build the screen where the email has been sent by reusing the code. As a recommendation, start by creating the responsive version of the project.
 
-  <br>
-  <br>
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/mail-sent.png?raw=true" width= "35%" alt="Mail sent">
+</p>
+
+```
+<div class="login">
+  <div class="form-container">
+    <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+
+    <h1 class="title">Email has been sent!</h1>
+    <p class="subtitle">Please check your inbox for instructions on how to reset the password</p>
+
+    <div class="email-image">
+      <img src="./icons/email.svg" alt="email">
+    </div>
+
+    <button class="primary-button login-button">Login</button>
+
+    <p class="resend">
+      <span>Didn't receive the email?</span>
+      <a href="/">Resend</a>
+    </p>
+  </div>
+</div>
+```
+<br>
+
+  ### CSS Code
+```
+.login {
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+    .form-container {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      width: 300px;
+      justify-items: center;
+    }
+    .logo {
+      width: 150px;
+      margin-bottom: 48px;
+      justify-self: center;
+      display: none;
+    }
+    .title {
+      font-size: var(--lg);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .subtitle {
+      color: var(--very-light-pink);
+      font-size: var(--md);
+      font-weight: 300;
+      margin-top: 0;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .email-image {
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      background-color: var(--text-input-field);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .email-image img {
+      width: 80px;
+    }
+    .resend {
+      font-size: var(--sm);
+    }
+    .resend span {
+      color: var(--very-light-pink);
+    }
+    .resend a {
+      color: var(--hospital-green);
+      text-decoration: none;
+    }
+    .primary-button {
+      background-color: var(--hospital-green);
+      border-radius: 8px;
+      border: none;
+      color: var(--white);
+      width: 100%;
+      cursor: pointer;
+      font-size: var(--md);
+      font-weight: bold;
+      height: 50px;
+    }
+    .login-button {
+      margin-top: 14px;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 640px) {
+      .logo {
+        display: block;
+      }
+    }
+```
+<br>
+
+  ### Responsive Design
+Our project is responsive, meaning it adapts to different screen sizes. To achieve this, we implemented media queries.
+```
+@media (max-width: 640px)
+```
+
+The styles outside apply to desktops, while those inside will apply when the viewport is smaller than 640 pixels.
+
+There's another approach to responsive design, known as Mobile First. In this approach, you first think about styles for mobile devices and then gradually scale up to larger screens.
+
+
+<br>
+<br>
 
   ## Login
 
-  <br>
-  <br>
+<br>
+<br>
 
   ## Create and Edit my Account
 
-  <br>
-  <br>
+<br>
+<br>
 
   ## My Account
 
@@ -413,53 +535,53 @@ See the detailed explanation [here](https://platzi.com/new-home/clases/2030-mobi
 # RESPONSIVE LAYOUT: MAIN VIEWS
   ## Home Page: HTML
 
-  <br>
-  <br>
+<br>
+<br>
 
   ## Home Page: CS
 
-  <br>
-  <br>
+<br>
+<br>
 
   ## Desktop Menu
 
-  <br>
-  <br>
+<br>
+<br>
 
   ## Mobile Menu
 
-  <br>
-  <br>
+<br>
+<br>
 
   ## My Purchase Order: HTML
 
-  <br>
-  <br>
+<br>
+<br>
 
   ## My Purchase Order: CSS
 
-  <br>
-  <br>
+<br>
+<br>
 
   ## My Orders
 
-  <br>
-  <br>
+<br>
+<br>
 
   ## Navbar: HTML
 
-  <br>
-  <br>
+<br>
+<br>
 
   ## Navbar: CSS
 
-  <br>
-  <br>
+<br>
+<br>
 
   ## Product Details
 
-  <br>
-  <br>
+<br>
+<br>
 
   ## Shopping Cart: HTML
 
