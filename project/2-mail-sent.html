@@ -38,6 +38,7 @@
 
     .form-container{
       display: grid;
+      justify-items: center;
 
       /* Divides the space in 4 pieces and the middle row will have that height*/
       grid-template-rows: auto 1fr auto; 
@@ -65,6 +66,33 @@
       margin-top: 0;
       margin-bottom: 32px;
       text-align: center;
+    }
+
+    .email-image{
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      background-color: var(--text-input-field);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .email-image img{
+      width: 80px;
+    }
+
+    .resend{
+      font-size: var(--sm);
+    }
+
+    .resend span{
+      color: var(--very-light-pink);
+    }
+
+    .resend a{
+      color: var(--hospital-green);
     }
 
     .form{
@@ -110,7 +138,12 @@
         <img src="../resources/icons/email.svg" alt="email">
       </div>
 
-      <button class="primary-button login-button"></button>
+      <button class="primary-button login-button">Login</button>
+
+      <p class='resend'>
+        <span>Didn't receive the email?</span>
+        <a href="/">Resend</a>
+      </p>
     </div>
   </div>
 </body>

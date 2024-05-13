@@ -393,7 +393,7 @@ See the detailed explanation [here](https://platzi.com/new-home/clases/2030-mobi
 <br>
 <br>
 
-  ## Mail sent
+  ## [Mail Sent](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/2-mail-sent.html)
 Now we will build the screen where the email has been sent by reusing the code. As a recommendation, start by creating the responsive version of the project.
 
 <p align="center">
