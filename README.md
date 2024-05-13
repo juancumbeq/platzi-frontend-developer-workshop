@@ -728,64 +728,116 @@ Space-between distributes the items evenly, leaving the first item at the beginn
 <br>
 <br>
 
-  ## My Account
+  ## [My Account](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/5-my-account.html)
+This time I'll teach you how to layout the screen that allows the user to edit their account. As you can see, this view contains other relevant data such as the email, password, and the person's name.
+
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/edit.png?raw=true" width= "45%" alt="Edit">
+</p>
+
+<br>
+
+  ### How to Show the User the Entered Data
+To show the user the data they entered during registration, we'll use the code from the "create account" section. Keeping in mind that the purpose of this view is to display information, not obtain it, we need to modify the form as follows:
+
+  * We'll change the inputs to paragraphs:
+```
+<div>
+    <label for="name" class="label">Name</label>
+    <p class="value">Camila Yokoo</p>
+
+    <label for="email" class="label">Email</label>
+    <p class="value">camilayokoo@gmail.com</p>
+
+    <label for="password" class="label">Password</label>
+    <p class="value">*********</p>
+</div>
+```
+
+  * Styling the text:
+```
+.value {
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    margin: 8px 0 32px 0;
+}
+```
+
+  * Apply the secondary-button class to the button:
+```
+.secondary-button {
+    background-color: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+}
+```
+<br>
+
+  ### How to Proceed With the Project
+We have completed the module for creating authentication screens. Now, all that's left is to build the main views. Remember that in the Practical React.js Course, we will combine all the screens to finish our frontend.
 
 <br>
 <br>
 <br>
 
 # RESPONSIVE LAYOUT: MAIN VIEWS
-  ## Home Page: HTML
+  ## [Home Page: HTML](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
 
 <br>
 <br>
 
-  ## Home Page: CS
+  ## [Home Page: CS](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
 
 <br>
 <br>
 
-  ## Desktop Menu
+  ## [Desktop Menu](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
 
 <br>
 <br>
 
-  ## Mobile Menu
+  ## [Mobile Menu](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
 
 <br>
 <br>
 
-  ## My Purchase Order: HTML
+  ## [My Purchase Order: HTML](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
 
 <br>
 <br>
 
-  ## My Purchase Order: CSS
+  ## [My Purchase Order: CSS](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
 
 <br>
 <br>
 
-  ## My Orders
+  ## [My Orders](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
 
 <br>
 <br>
 
-  ## Navbar: HTML
+  ## [Navbar: HTML](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
 
 <br>
 <br>
 
-  ## Navbar: CSS
+  ## [Navbar: CSS](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
 
 <br>
 <br>
 
-  ## Product Details
+  ## [Product Details](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
 
 <br>
 <br>
 
-  ## Shopping Cart: HTML
+  ## [Shopping Cart: HTML](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
 
 <br>
 <br>
