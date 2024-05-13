@@ -527,6 +527,7 @@ Now we will work on styling the login screen. This is where users will be able t
 <br>
 
   ### HTML Code
+As we can see in the image, we have a logo, two inputs, a button with text below it, and another button that in its mobile version moves to the bottom of the screen.
 ```
 <div class="login">
   <div class="form-container">
@@ -629,15 +630,6 @@ Now we will work on styling the login screen. This is where users will be able t
   }
 }
 ```
-
-Challenge to create the button
-
-You must make the second button look the same as the design. We would like to see how you solve this. Publish your work in the contributions section.
-
-Tips for solving the problem
-
-There are several ways to achieve this. One of them is by using the position property. This property specifies how an element is positioned in the document. The top, right, bottom, and left properties determine the final location.
-
 <br>
 
   ### Types of positioning in HTML
@@ -666,6 +658,72 @@ Position can have any of these values:
 <br>
 
   ## Create and Edit my Account
+We will layout the view that will allow the user to create or edit their account. This includes a title, three input fields for entering data, and a button.
+
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/create.png?raw=true" width= "35%" alt="Create">
+</p>
+
+<br>
+
+   ### How to Layout a Registration Form
+To layout this form, you can refer to the code generated for the login view. Remove the logo and subtitle from this structure, and it should look like this:
+```
+<div class="login">
+    <div class="form-container">
+        <h1 class="title">My account</h1>
+        <form action="/" class="form">    
+            <div>
+                <label for="name" class="label">Name</label>
+                <input type="text" id="name" placeholder="Teff" class="input input-name">
+
+                <label for="email" class="label">Email</label>
+                <input type="text" id="email" placeholder="platzi@example.com" class="input input-email">
+
+                <label for="password" class="label">Password</label>
+                <input type="password" id="password" placeholder="*********" class="input input-password">
+            </div>
+            <input type="submit" value="Create" class="primary-button login-button">
+        </form>
+    </div>
+</div>
+```
+
+Finally, before the closing form tag, add the button so the user can submit the information.
+
+<br>
+
+   ### Styles for the Registration Form:
+We'll add some more styles to the ones we used previously in the "new password" section to format this section.
+
+Adjustments include:
+
+  * Increasing the spacing between the form inputs:
+```
+  .input-name,
+  .input-email,
+  .input-password {
+      margin-bottom: 22px;
+  }
+```
+  * Modify the CSS of the "title" class to align the title to the left and distance it from the inputs:
+
+```
+  .title {
+      margin-bottom: 36px;
+      text-align: start;
+  }
+```
+<br>
+
+  ### How to Align the Form Button?
+Similar to the previous challenge, in its mobile version, this screen moves the button away from the form by placing it at the bottom. One of the simplest and most effective ways to do this is by using Flexbox.
+
+We start by giving our container and form a height of 100%. Since the form is already flexible and has a column direction, we just need to add in the media query: justify-content: space-between.
+
+This property positions the content horizontally when the value of flex-direction is row. In our case, the value is columns, so justify-content will apply vertically.
+
+Space-between distributes the items evenly, leaving the first item at the beginning and the last one at the end.
 
 <br>
 <br>
