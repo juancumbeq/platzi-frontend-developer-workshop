@@ -637,7 +637,7 @@ As we can see in the image, we have a logo, two inputs, a button with text below
 Position can have any of these values:
 
 <p align="center">
-  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/position.png?raw=true" width= "35%" alt="Position">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/position.png?raw=true" width= "60%" alt="Position">
 </p>
 
   * **Static**: Default position of elements. It's the only case where top, right, bottom, and left cannot be used.
@@ -657,11 +657,11 @@ Position can have any of these values:
 <br>
 <br>
 
-  ## Create and Edit my Account
+  ## [Create and Edit my Account](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/4-create-account.html)
 We will layout the view that will allow the user to create or edit their account. This includes a title, three input fields for entering data, and a button.
 
 <p align="center">
-  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/create.png?raw=true" width= "35%" alt="Create">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/create.png?raw=true" width= "45%" alt="Create">
 </p>
 
 <br>
