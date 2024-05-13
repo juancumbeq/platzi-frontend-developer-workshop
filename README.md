@@ -516,7 +516,151 @@ There's another approach to responsive design, known as Mobile First. In this ap
 <br>
 <br>
 
-  ## Login
+  ## [Login](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/3-login.html)
+
+Now we will work on styling the login screen. This is where users will be able to access the application you are creating. You will also encounter a layout challenge that you can solve in the comments.
+
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/login.png?raw=true" width= "35%" alt="Login">
+</p>
+
+<br>
+
+  ### HTML Code
+```
+<div class="login">
+  <div class="form-container">
+    <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+
+    <form action="/" class="form">
+      <label for="email" class="label">Email address</label>
+      <input type="text" id="email" placeholder="platzi@example.cm" class="input input-email">
+
+      <label for="password" class="label">Password</label>
+      <input type="password" id="password" placeholder="*********" class="input input-password">
+
+      <input type="submit" value="Log in" class="primary-button login-button">
+      <a href="/">Forgot my password</a>
+    </form>
+
+    <button class="secondary-button signup-button">Sign up</button>
+  </div>
+</div>
+```
+
+<br>
+
+  ### CSS Code
+```
+.login {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.form-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 300px;
+}
+.logo {
+  width: 150px;
+  margin-bottom: 48px;
+  justify-self: center;
+  display: none;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form a {
+  color: var(--hospital-green);
+  font-size: var(--sm);
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 52px;
+}
+.label {
+  font-size: var(--sm);
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.input {
+  background-color: var(--text-input-field);
+  border: none;
+  border-radius: 8px;
+  height: 30px;
+  font-size: var(--md);
+  padding: 6px;
+  margin-bottom: 12px;
+}
+.input-email {
+  margin-bottom: 22px;
+}
+.primary-button {
+  background-color: var(--hospital-green);
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+  width: 100%;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+  height: 50px;
+}
+.secondary-button {
+  background-color: var(--white);
+  border-radius: 8px;
+  border: 1px solid var(--hospital-green);
+  color: var(--hospital-green);
+  width: 100%;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+  height: 50px;
+}
+.login-button {
+  margin-top: 14px;
+  margin-bottom: 30px;
+}
+@media (max-width: 640px) {
+  .logo {
+    display: block;
+  }
+}
+```
+
+Challenge to create the button
+
+You must make the second button look the same as the design. We would like to see how you solve this. Publish your work in the contributions section.
+
+Tips for solving the problem
+
+There are several ways to achieve this. One of them is by using the position property. This property specifies how an element is positioned in the document. The top, right, bottom, and left properties determine the final location.
+
+<br>
+
+  ### Types of positioning in HTML
+
+Position can have any of these values:
+
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/position.png?raw=true" width= "35%" alt="Position">
+</p>
+
+  * **Static**: Default position of elements. It's the only case where top, right, bottom, and left cannot be used.
+
+  * **Absolute**: Elements remain in the position where they were placed but lose their physical space, meaning they overlap other elements. Note: to apply this value, the parent container must have position relative.
+
+  * **Relative**: Elements retain their original position and physical space, but we can move them with the top, right, bottom, and left properties.
+
+  * **Fixed**: Elements lose their physical space and remain fixed in place.
+
+  * **Sticky**: Elements retain their physical space, but when scrolled, they follow without losing that space. It's commonly used for navigation bars.
+
+  * **Initial**: Returns the position of an element to its original state.
+
+  * **Inherit**: Inherits the position from its parent.
 
 <br>
 <br>
