@@ -788,11 +788,180 @@ We have completed the module for creating authentication screens. Now, all that'
 
 # RESPONSIVE LAYOUT: MAIN VIEWS
   ## [Home Page: HTML](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
+The homepage is the main web page of a website and the first thing people will see when they encounter your brand. In this case, it contains an image for each product, with its price and name, as well as an icon that allows users to add the item to the shopping cart.
+
+In this new module, we will work on the main views. We start with the HTML for the homepage, i.e., the cards that help the user review the available products in an e-commerce.
+
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/cards.png?raw=true" width= "90%" alt="Cards">
+</p>
+
+<br>
+
+  ### How to create the HTML Structure of the homepage:
+
+These are the steps to follow to layout the sections of an e-commerce. Let's get started!
+
+  * Create a main section: 
+    * ```<section class="main-container"></section>```
+
+  * Inside, place a div that will serve as a container for the cards, allowing us to center them:
+    * ```<div class="cards-container"></div>```
+
+  * Finally, structure a card and repeat it several times:
+  * ```
+    <div class="product-card">
+        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        <div class="product-info">
+            <div>
+                <p>$120,00</p>
+                <p>Bike</p>
+            </div>
+            <figure>
+                <img src="./icons/bt_add_to_cart.svg" alt="">
+            </figure>
+        </div>
+    </div>
+    ```
+
+<br>
+
+  ### How to Place Images in HTML:
+
+The HTML img element embeds an image into a document. Its "src" attribute is used to specify where the image is located, whether in a folder or a URL.
+
+Meanwhile, "alt" is used to add a description to our image. This is useful for SEO (search engine optimization) purposes and also improves site accessibility.
+
+Review this information here 👈
+
+<br>
+
+  ### Which Containers to Use?
+
+There are two tags that allow us to organize images in a semantic way.
+
+  * [Figure](https://platzi.com/new-home/clases/2008-html-css/31081-etiqueta-figure/)
+  * [Picture](https://platzi.com/new-home/clases/2008-html-css/31222-imagenes-responsive/)
 
 <br>
 <br>
 
   ## [Home Page: CS](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
+Now we'll style the cards that make up the homepage using CSS Grid. Users will see different styles depending on the device they connect from, and here you can identify their differences.
+
+Here's the visualization from a computer:
+
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/cards.png?raw=true" width= "90%" alt="Cards">
+</p>
+
+And this is the design for mobile devices:
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/cards-mobile.png?raw=true" width= "90%" alt="Cards Mobile">
+</p>
+
+<br>
+
+  ### How to implement CSS Grid to center multiple images:
+We'll work on the main container, whose class is "cards-container". Using "display: grid", we create the grids and then define the columns with "grid-template-columns", using the "repeat" function to repeat our code fragment.
+
+Using "auto-fill", we ensure that the grid occupies 100% of the available space. Then, we generate space between the items with "gap". Finally, we align them horizontally and vertically using "place-content".
+
+The CSS would look like this:
+
+```
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  gap: 26px;
+  place-content: center;
+}
+```
+Now we need to adjust the size of the images.
+
+```
+.product-card {
+  width: 240px;
+}
+.product-card img {
+  width: 240px;
+  height: 240px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+```
+
+<br>
+
+  ### Same class, different styles:
+
+We want the cards on the homepage to display the item's price and below it, the name of the item with a different font size and color.
+
+Next to both should be the shopping cart icon.
+
+To achieve this result, we must:
+
+Apply Flexbox to the container:
+
+```
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+```
+Adjust the size of the icon:
+
+```
+.product-info figure {
+  margin: 0;
+}
+.product-info figure img {
+  width: 35px;
+  height: 35px;
+}
+```
+Use nth-child on the p tags:
+
+```
+.product-info div p:nth-child(1) {
+  font-weight: bold;
+  font-size: var(--md);
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+.product-info div p:nth-child(2) {
+  font-size: var(--sm);
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--very-light-pink);
+}
+```
+The nth-child pseudo-class allows us to apply different styles to the paragraphs without needing to assign a class to each one.
+
+<br>
+
+  ### Responsive homepage with just 8 lines of code:
+
+By assigning media queries, we ensure that the cards look good on different screens, i.e., we develop a responsive homepage.
+
+Since we implemented CSS Grid, all we need to do is reduce the size of the images, like this:
+
+```
+@media (max-width: 640px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fill, 140px);
+  }
+  .product-card {
+    width: 140px;
+  }
+  .product-card img {
+    width: 140px;
+    height: 140px;
+  }
+}
+```
 
 <br>
 <br>
