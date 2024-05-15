@@ -973,7 +973,6 @@ Next, we will carry out the structure of the options list that will be displayed
 <br>
 
   ### How to create a dropdown list in HTML5:
-
 This section of the desktop menu has three items, which will allow the user to choose between: accessing their account, viewing their orders, or logging out of the page. In other words, they form a list of options.
 
 Remember that HTML5 semantics require that list elements **(li)** be inside a special container tag **(ul / ol)**.
@@ -1001,7 +1000,6 @@ You can use this shortcut: ``` ul>li*3>a.title```
 <br>
 
   ### CSS styles for lists inside the menu:
-
 This view of the menu is like a box that will appear when the user clicks on their email. For now, we'll just structure it, as we'll add functionality in the React.js course.
 
 Therefore, we need to give dimensions and spacing to the container.
@@ -1051,17 +1049,16 @@ We use **display: inline-block** to define a margin-bottom, since it's not possi
 <br>
 <br>
 
-  ## [Mobile Menu](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
+  ## [Mobile Menu](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/)
 It's time to create the navigation menu for the mobile or responsive version of our virtual store, and this structure presents three lists with different options. Remember that configuring this version of the site helps it flow better on all screen sizes and saves time because you don't need to have two versions of a website.
 
 <p align="center">
-  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/desktop-menu.png?raw=true" width= "50%" alt="Desktop menu">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/mobile-menu.png?raw=true" width= "50%" alt="Mobile menu">
 </p>
 
 <br>
 
   ### Semantic structure of a menu for mobile devices:
-
 The menu for the mobile version of our store contains three sections, and since they are lists, we can contain them in ``ul`` tags. First, we need to generate the main container that will allow for subsequent styling.
 ```
 <div class="mobile-menu">
@@ -1107,7 +1104,6 @@ Finally, we display their email and the option to log out.
 <br>
 
   ### CSS Specificity:
-
 Just like we did with the desktop menu, to style this view, we need to remove the default decoration from the lists and anchor tags, separate the containers by defining margin and padding, and add colors and font styles.
 
 Here's how our CSS would look:
