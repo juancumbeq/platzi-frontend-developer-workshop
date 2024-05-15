@@ -961,7 +961,7 @@ Since we implemented CSS Grid, all we need to do is reduce the size of the image
 <br>
 <br>
 
-  ## [Desktop Menu](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
+  ## [Desktop Menu](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/7-dropdown-menu-desktop.html)
 A dropdown menu, or dropdown list, is a graphical control element that presents the user with a variety of options from a category that they can choose to perform an action, such as making a purchase. It has two states: active or inactive. When it is inactive, it displays only one value.
 
 Next, we will carry out the structure of the options list that will be displayed from the navigation menu on the web version of our site.
@@ -1052,6 +1052,134 @@ We use **display: inline-block** to define a margin-bottom, since it's not possi
 <br>
 
   ## [Mobile Menu](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
+It's time to create the navigation menu for the mobile or responsive version of our virtual store, and this structure presents three lists with different options. Remember that configuring this version of the site helps it flow better on all screen sizes and saves time because you don't need to have two versions of a website.
+
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/desktop-menu.png?raw=true" width= "50%" alt="Desktop menu">
+</p>
+
+<br>
+
+  ### Semantic structure of a menu for mobile devices:
+
+The menu for the mobile version of our store contains three sections, and since they are lists, we can contain them in ``ul`` tags. First, we need to generate the main container that will allow for subsequent styling.
+```
+<div class="mobile-menu">
+```
+
+Secondly, we define the sections. The first section corresponds to the categories.
+```
+<ul>
+  <li>
+    <a href="/">CATEGORIES</a>
+  </li>
+  <li>
+    <a href="/">All</a>
+  </li>
+  <!-- Other list items -->
+</ul>
+```
+
+Then, we have the user's orders and account.
+```
+<ul>
+  <li>
+    <a href="/">My orders</a>
+  </li>
+  <li>
+    <a href="/">My account</a>
+  </li>
+</ul>
+```
+
+Finally, we display their email and the option to log out.
+```
+<ul>
+  <li>
+    <a href="/" class="email">platzi@example.com</a>
+  </li>
+  <li>
+    <a href="/" class="sign-out">Sign out</a>
+  </li>
+</ul>
+```
+
+<br>
+
+  ### CSS Specificity:
+
+Just like we did with the desktop menu, to style this view, we need to remove the default decoration from the lists and anchor tags, separate the containers by defining margin and padding, and add colors and font styles.
+
+Here's how our CSS would look:
+```
+.mobile-menu {
+  padding: 24px;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: bold;
+}
+
+.mobile-menu ul {
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+}
+
+.mobile-menu ul:nth-child(1) {
+  border-bottom: 1px solid var(--very-light-pink);
+}
+
+.mobile-menu ul li {
+  margin-bottom: 24px;
+}
+
+.email {
+  font-size: var(--sm);
+  font-weight: 300;
+}
+
+.sign-out {
+  font-size: var(--sm);
+  color: var(--hospital-green);
+}
+```
+
+In the last section, we have a specificity problem. The font-weight of the email class and the color of the sign-out class are not being applied.
+
+Specificity involves giving a CSS rule a value on how specific the style is, so that browsers can know which styles to apply over others, regardless of where they are in the code. The style will be applied where the specificity is higher.
+
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/specificity.png?raw=true" width= "50%" alt="Specificity">
+</p>
+
+By understanding the types of specificity, we realize that we need to increase the value or weight of the email and sign-out classes.
+
+There are several ways to achieve this. One is to use !important.
+```
+.email {
+  font-weight: 300 !important;
+}
+
+.sign-out {
+  color: var(--hospital-green) !important;
+}
+```
+
+Another way is to call both classes.
+```
+.mobile-menu .menu-email {
+  font-size: var(--sm);
+  font-weight: 300;
+}
+
+.mobile-menu .menu-signout {
+  font-size: var(--sm);
+  color: var(--hospital-green);
+}
+```
 
 <br>
 <br>
