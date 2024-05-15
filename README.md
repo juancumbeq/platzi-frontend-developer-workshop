@@ -793,7 +793,7 @@ The homepage is the main web page of a website and the first thing people will s
 In this new module, we will work on the main views. We start with the HTML for the homepage, i.e., the cards that help the user review the available products in an e-commerce.
 
 <p align="center">
-  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/cards.png?raw=true" width= "90%" alt="Cards">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/cards.png?raw=true" width= "100%" alt="Cards">
 </p>
 
 <br>
@@ -846,18 +846,18 @@ There are two tags that allow us to organize images in a semantic way.
 <br>
 <br>
 
-  ## [Home Page: CS](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
+  ## [Home Page: CSS](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
 Now we'll style the cards that make up the homepage using CSS Grid. Users will see different styles depending on the device they connect from, and here you can identify their differences.
 
 Here's the visualization from a computer:
 
 <p align="center">
-  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/cards.png?raw=true" width= "90%" alt="Cards">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/cards.png?raw=true" width= "100%" alt="Cards">
 </p>
 
 And this is the design for mobile devices:
 <p align="center">
-  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/cards-mobile.png?raw=true" width= "90%" alt="Cards Mobile">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/cards-mobile.png?raw=true" width= "50%" alt="Cards Mobile">
 </p>
 
 <br>
@@ -868,7 +868,6 @@ We'll work on the main container, whose class is "cards-container". Using "displ
 Using "auto-fill", we ensure that the grid occupies 100% of the available space. Then, we generate space between the items with "gap". Finally, we align them horizontally and vertically using "place-content".
 
 The CSS would look like this:
-
 ```
 .cards-container {
   display: grid;
@@ -894,14 +893,13 @@ Now we need to adjust the size of the images.
 <br>
 
   ### Same class, different styles:
-
 We want the cards on the homepage to display the item's price and below it, the name of the item with a different font size and color.
 
 Next to both should be the shopping cart icon.
 
 To achieve this result, we must:
 
-Apply Flexbox to the container:
+  * Apply Flexbox to the container:
 
 ```
 .product-info {
@@ -911,8 +909,7 @@ Apply Flexbox to the container:
   margin-top: 12px;
 }
 ```
-Adjust the size of the icon:
-
+  * Adjust the size of the icon:
 ```
 .product-info figure {
   margin: 0;
@@ -922,8 +919,7 @@ Adjust the size of the icon:
   height: 35px;
 }
 ```
-Use nth-child on the p tags:
-
+  * Use nth-child on the p tags:
 ```
 .product-info div p:nth-child(1) {
   font-weight: bold;
@@ -943,7 +939,6 @@ The nth-child pseudo-class allows us to apply different styles to the paragraphs
 <br>
 
   ### Responsive homepage with just 8 lines of code:
-
 By assigning media queries, we ensure that the cards look good on different screens, i.e., we develop a responsive homepage.
 
 Since we implemented CSS Grid, all we need to do is reduce the size of the images, like this:
@@ -967,6 +962,91 @@ Since we implemented CSS Grid, all we need to do is reduce the size of the image
 <br>
 
   ## [Desktop Menu](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
+A dropdown menu, or dropdown list, is a graphical control element that presents the user with a variety of options from a category that they can choose to perform an action, such as making a purchase. It has two states: active or inactive. When it is inactive, it displays only one value.
+
+Next, we will carry out the structure of the options list that will be displayed from the navigation menu on the web version of our site.
+
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/dropdown.png?raw=true" width= "50%" alt="Dropdown">
+</p>
+
+<br>
+
+  ### How to create a dropdown list in HTML5:
+
+This section of the desktop menu has three items, which will allow the user to choose between: accessing their account, viewing their orders, or logging out of the page. In other words, they form a list of options.
+
+Remember that HTML5 semantics require that list elements **(li)** be inside a special container tag **(ul / ol)**.
+
+Therefore, the structure is as follows:
+```
+<div class="desktop-menu">
+  <ul>
+    <li>
+      <a href="/" class="title">My orders</a>
+    </li>
+
+    <li>
+      <a href="/">My account</a>
+    </li>
+
+    <li>
+      <a href="/">Sign out</a>
+    </li>
+  </ul>
+</div>
+```
+You can use this shortcut: ``` ul>li*3>a.title```
+
+<br>
+
+  ### CSS styles for lists inside the menu:
+
+This view of the menu is like a box that will appear when the user clicks on their email. For now, we'll just structure it, as we'll add functionality in the React.js course.
+
+Therefore, we need to give dimensions and spacing to the container.
+```
+.desktop-menu {
+  width: 100px;
+  height: auto;
+  border: 1px solid var(--very-light-pink);
+  border-radius: 6px;
+  padding: 20px 20px 0 20px;
+}
+```
+Now, we remove the default styles from the list.
+```
+.desktop-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+```
+Finally, we can define the visual as specified in the design.
+```
+.desktop-menu ul li {
+  text-align: end;
+}
+.desktop-menu ul li:nth-child(1),
+.desktop-menu ul li:nth-child(2) {
+  font-weight: bold;
+}
+.desktop-menu ul li:last-child {
+  padding-top: 20px;
+  border-top: 1px solid var(--very-light-pink);
+}
+.desktop-menu ul li:last-child a {
+  color: var(--hospital-green);
+  font-size: var(--sm);
+}
+.desktop-menu ul li a {
+  color: var(--back);
+  text-decoration: none;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+```
+We use **display: inline-block** to define a margin-bottom, since it's not possible to apply the margin property to inline elements.
 
 <br>
 <br>
