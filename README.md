@@ -1049,7 +1049,7 @@ We use **display: inline-block** to define a margin-bottom, since it's not possi
 <br>
 <br>
 
-  ## [Mobile Menu](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/)
+  ## [Mobile Menu](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/8-mobile-menu.html)
 It's time to create the navigation menu for the mobile or responsive version of our virtual store, and this structure presents three lists with different options. Remember that configuring this version of the site helps it flow better on all screen sizes and saves time because you don't need to have two versions of a website.
 
 <p align="center">
@@ -1181,6 +1181,63 @@ Another way is to call both classes.
 <br>
 
   ## [My Purchase Order: HTML](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
+Now we will layout the screen called "my order," which is designed to display the items selected by the user within a virtual store or marketplace. This is the structure expected for you to create according to the view of each device.
+
+  * Desktop:
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/myorder-desktop.png?raw=true" width= "50%" alt="My order desktop">
+</p>
+
+  * Mobile:
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/myorder-mobile.png?raw=true" width= "50%" alt="My order mobile">
+</p>
+
+<br>
+
+  ### How to layout an order page in HTML
+The order page will show the user the products they selected, the total amount of money, the date, and the total quantity of items.
+
+Therefore, our layout contains:
+
+  * **Div "my order"** → main container
+
+  * **Div "my order container"** → allows us to align the content more easily
+
+  * **Title** → in the mobile version, it goes up to the menu
+
+  * **Div "my order content"** → a bar-like container of text with the date, number of items, and total money
+
+  * **Div "shopping cart"** → with the image of the item and text specifying its name and price.
+
+The resulting HTML code is as follows:
+```
+<div class="my-order">
+  <div class="my-order-container">
+    <h1 class="title">My order</h1>
+
+    <div class="my-order-content">
+      <div class="order">
+        <p>
+          <span>03.25.21</span>
+          <span>6 articles</span>
+        </p>
+        <p>$560.00</p>
+      </div>
+
+      <div class="shopping-cart">
+        <figure>
+          <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+        </figure>
+        <p>Bike</p>
+        <p>$30,00</p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+```
+Shortcuts: ```.my-order>(.my-order-container>.my-order-content>(p>span*2)+p{560.00})+.shopping-cart>figure>img+p*2```
 
 <br>
 <br>
