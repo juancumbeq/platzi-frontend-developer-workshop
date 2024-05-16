@@ -1180,7 +1180,7 @@ Another way is to call both classes.
 <br>
 <br>
 
-  ## [My Purchase Order: HTML](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
+  ## [My Purchase Order: HTML](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/9-my-order.html)
 Now we will layout the screen called "my order," which is designed to display the items selected by the user within a virtual store or marketplace. This is the structure expected for you to create according to the view of each device.
 
   * Desktop:
@@ -1242,7 +1242,142 @@ Shortcuts: ```.my-order>(.my-order-container>.my-order-content>(p>span*2)+p{560.
 <br>
 <br>
 
-  ## [My Purchase Order: CSS](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
+  ## [My Purchase Order: CSS](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/9-my-order.html)
+We will style the HTML code we created for the "my order" section with the options provided by CSS to make users see their order like this:
+
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/myorder-desktop.png?raw=true" width= "50%" alt="My order desktop">
+</p>
+
+<br>
+
+  ### How to apply CSS to a purchase order
+A purchase order has an indefinite number of items, so we must implement CSS styles that work for both small sales and sales of thousands of items.
+
+What should we do to build these two views? Follow these steps:
+
+  * Define the dimensions of the main container and center its content
+```
+.my-order {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+```
+The vh relative measurement, viewport height, defines the height of the container. In this case, we are telling it to be the total height of the screen.
+
+  * Set the font size of the title and its separation from the total bar
+```
+.title {
+  font-size: var(--lg);
+  margin-bottom: 40px;
+}
+```
+
+  * Prepare the CSS Grid grid
+```
+.my-order-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 300px;
+}
+```
+
+  * Provide space to the elements and create another grid
+```
+.my-order-content {
+  display: flex;
+  flex-direction: column;
+}
+  .order {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+  background-color: var(--text-input-field);
+  margin-bottom: 24px;
+  border-radius: 8px;
+  padding: 0 24px;
+}
+.order p:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+.order p span:nth-child(1) {
+  font-size: var(--md);
+  font-weight: bold;
+}
+.order p span:nth-child(2) {
+  font-size: var(--sm);
+  color: var(--very-light-pink);
+}
+.order p:nth-child(2) {
+  text-align: end;
+  font-weight: bold;
+}
+```
+
+  * Define the visual part of the "shopping cart"
+```
+.shopping-cart {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+.shopping-cart figure {
+  margin: 0;
+}
+.shopping-cart figure img {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.shopping-cart p:nth-child(2) {
+  color: var(--very-light-pink);
+}
+.shopping-cart p:nth-child(3) {
+  font-size: var(--md);
+  font-weight: bold;
+}
+```
+
+<br>
+
+  ### What does object-fit achieve in CSS?
+We apply the object-fit property to images because it determines how the content will fit into its container.
+
+Its values can be:
+
+  * **contain** → maintains the aspect ratio while fitting inside the container.
+  * **cover** → maintains the aspect ratio but adjusts it to fill the container.
+  * **fill** → resizes the content to fill the container.
+  * **none** → does not resize.
+  * **scale-down** → the content is sized as if none or contain were specified, resulting in a smaller concrete object size.
+
+[Documentation.](https://developer.mozilla.org/es/docs/Web/CSS/object-fit)
+
+  ### ``aling-items: center`` VS ``place-items: center ``
+In CSS Grid, there are two properties related to centering items: align-items and place-items. Here's the difference between them:
+
+  * align-items: center;
+
+    * This property is used to vertically align items along the cross axis of the grid container.
+    * When applied to the grid container, it centers the grid items vertically within their respective grid tracks.
+    * It affects the alignment of items when the grid container has extra space along the cross axis.
+    * If the grid container has a fixed height, align-items: center; will center the grid items vertically within that height.
+
+  * place-items: center;
+
+    * This property is a shorthand for both align-items and justify-items.
+    * It sets both the alignment of items along the block axis and the inline axis to center.
+    * When applied to the grid container, it centers the grid items both vertically and horizontally within their respective grid tracks.
+    * It's useful when you want to center items both horizontally and vertically without specifying separate properties for each axis.
+
+In summary, align-items: center; specifically deals with vertical alignment along the cross axis, while place-items: center; centers items both vertically and horizontally within their grid tracks.
 
 <br>
 <br>
