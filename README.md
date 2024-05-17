@@ -1534,30 +1534,33 @@ Our structure will look like this:
 
   ## [Navbar: CSS](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/11-navbar.html)
 It's time to modify the styles of our menu. The challenge is to align it with the shopping cart.
-menu-css.png
 
-Basic CSS Styles for the Menu
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/navbar-css-desktop.png?raw=true" width= "50%" alt="Navbar desktop">
+</p>
+
+<br>
+
+  ### Basic CSS Styles for the Menu
 Styling a menu is very simple with CSS3. We need to align the elements in a horizontal bar so that they occupy the entire width of the screen.
 
 How do we style this menu? Follow these steps:
 
-Hide the menu icon from view, as it should only be seen when the user navigates with a mobile device.
-
-css
-Copiar código
+  * Hide the menu icon from view, as it should only be seen when the user navigates with a mobile device.
+```
 .menu {
    display: none;
 }
-Remove the decoration from links and lists
+```
 
-css
-Copiar código
+  * Remove the decoration from links and lists
+```
 text-decoration: none;
 list-style: none;
-Center the elements with Flexbox, remove the default padding and margin from the tags, and define the colors and font sizes
+```
 
-css
-Copiar código
+  * Center the elements with Flexbox, remove the default padding and margin from the tags, and define the colors and font sizes
+```
 body {
    margin: 0;
    font-family: 'Quicksand', sans-serif;
@@ -1604,10 +1607,10 @@ nav {
    font-size: var(--sm);
    margin-right: 12px;
 }
-Apply changes for mobile
+```
 
-css
-Copiar código
+  * Apply changes for mobile
+```
 @media (max-width: 640px) {
    .menu {
      display: block;
@@ -1619,48 +1622,55 @@ Copiar código
      display: none;
    }
 }
-How to Center the Shopping Cart in the Navigation Bar
+```
+<br>
+
+  ### How to Center the Shopping Cart in the Navigation Bar
 The main challenge is to position the shopping cart next to the number. This is the counter that will show the user how many items have been added to their order.
 
 To achieve this, we will use position: relative and absolute.
-
-css
-Copiar código
+```
 .navbar-shopping-cart {
       position: relative;
 }
 .navbar-shopping-cart div {
-      width: 16px;
-      height: 16px;
-      background-color: var(--hospital-green);
-      border-radius: 50%;
-      font-size: var(--sm);
-      font-weight: bold;
-      position: absolute;
-      top: -6px;
-      right: -3px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    width: 16px;
+    height: 16px;
+    background-color: var(--hospital-green);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-Bonus: Dropdown List in the Menu
+```
+<br>
+
+  ### Bonus: Dropdown List in the Menu
 The design recommended that next to the email address, there should be an arrow that allows the user to expand the menu with options: "my orders", "my account", and "sign-out".
 
-You can add it with these lines of HTML:
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/dropdown-menu.png?raw=true" width= "50%" alt="Dropdown menu">
+</p>
 
-html
-Copiar código
+You can add it with these lines of HTML:
+```
 <li class="email-nav">johndoe@gmail.com
     <img src="./assets/icons/flechita.svg" alt="">
 </li>
-Their styles are:
+```
 
-css
-Copiar código
+Their styles are:
+```
 .email-nav img {
     margin-left: 10px;
     transform: rotate(90deg);
 }
+```
 
 <br>
 <br>
