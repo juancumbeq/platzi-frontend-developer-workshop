@@ -1382,7 +1382,106 @@ In summary, align-items: center; specifically deals with vertical alignment alon
 <br>
 <br>
 
-  ## [My Orders](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
+  ## [My Orders](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/.html)
+We will create the "my orders" screen. This will allow the user to see all the orders they have placed. As you can see in the image, it is similar to the "my order" view, so we will reuse code.
+
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/myorders.png?raw=true" width= "50%" alt="My orders">
+</p>
+
+<br>
+
+  ### HTML to display the purchase orders
+The orders section contains the date, total number of items, and total amount of money for each order requested by the user. Remember that at this moment we are only creating the layout; later with JavaScript, we will make the data dynamic.
+
+The structure is as follows:
+```
+<div class="my-order">
+  <div class="my-order-container">
+    <h1 class="title">My orders</h1>
+
+    <div class="my-order-content">
+    
+      <div class="order">
+        <p>
+          <span>03.25.21</span>
+          <span>6 articles</span>
+        </p>
+        <p>$560.00</p>
+        <img src="./icons/flechita.svg" alt="arrow">
+      </div> 
+      
+    </div>
+  </div>
+</div>
+```
+<br>
+
+  ### CSS styles to create lists of requested orders
+Since the orders view is very similar to the "my order" section, we will implement the same styles.
+
+Our final CSS looks like this:
+```
+.my-order {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.title {
+  font-size: var(--lg);
+  margin-bottom: 40px;
+}
+.my-order-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 300px;
+}
+.my-order-content {
+  display: flex;
+  flex-direction: column;
+}
+.order {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.order p:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+.order p span:nth-child(1) {
+  font-size: var(--md);
+  font-weight: bold;
+}
+.order p span:nth-child(2) {
+  font-size: var(--sm);
+  color: var(--very-light-pink);
+}
+.order p:nth-child(2) {
+  text-align: end;
+  font-weight: bold;
+}
+```
+
+<br>
+
+  ### Am I really learning?
+To answer the question, we must understand that we learn when we create.
+
+This is because building allows us to:
+
+  * Understand more deeply
+  * Discover new ideas
+  * Imagine new ways to apply what we have learned
+  * Develop and strengthen skills
+  * Enter a state of flow.
+
+So, are you looking for different ways to write the code proposed by the instructor? Are you working on projects that you are passionate about? If the answers were affirmative, congratulations. You are truly learning!
+
+In case you are looking to improve in any aspect or discover more tips to boost your learning, review this class from the online learning strategies course.
 
 <br>
 <br>
