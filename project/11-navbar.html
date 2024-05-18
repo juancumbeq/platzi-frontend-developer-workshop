@@ -69,7 +69,12 @@
       margin-right: 12px;
     }
     .navbar-shopping-cart{
+      display: flex;
       position: relative;
+    }
+    .navbar-shopping-cart img:nth-child(1){
+      margin-right: 24px;
+      transform: rotate(90deg);
     }
     .navbar-shopping-cart div{
       width: 16px;
@@ -120,6 +125,7 @@
       <ul>
         <li class="navbar-email">platzi@example.com</li>
         <li class="navbar-shopping-cart">
+          <img src="../resources/icons/flechita.svg" alt="arrow">
           <img src="../resources/icons/icon_shopping_cart.svg" alt="shopping cart">
           <div>2</div>
         </li>

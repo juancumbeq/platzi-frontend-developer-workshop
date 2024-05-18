@@ -1473,13 +1473,13 @@ Our final CSS looks like this:
 We will start building the navigation menu for our page. The design team suggested different views for desktop and mobile. Here’s how it should look on desktop.
 
 <p align="center">
-  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/navbar-desktop.png?raw=true" width= "50%" alt="Navbar desktop">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/navbar-desktop.png?raw=true" width= "100%" alt="Navbar desktop">
 </p>
 
 And this is how it should look on mobile devices.
 
 <p align="center">
-  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/navbar-mobile.png?raw=true" width= "50%" alt="Navbar mobile">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/navbar-mobile.png?raw=true" width= "100%" alt="Navbar mobile">
 </p>
 
 <br>
@@ -1536,7 +1536,7 @@ Our structure will look like this:
 It's time to modify the styles of our menu. The challenge is to align it with the shopping cart.
 
 <p align="center">
-  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/navbar-css-desktop.png?raw=true" width= "50%" alt="Navbar desktop">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/navbar-css-desktop.png?raw=true" width= "100%" alt="Navbar desktop">
 </p>
 
 <br>
@@ -1654,28 +1654,193 @@ To achieve this, we will use position: relative and absolute.
 The design recommended that next to the email address, there should be an arrow that allows the user to expand the menu with options: "my orders", "my account", and "sign-out".
 
 <p align="center">
-  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/dropdown-menu.png?raw=true" width= "50%" alt="Dropdown menu">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/dropdown-menu.png?raw=true" width= "100%" alt="Dropdown menu">
 </p>
 
 You can add it with these lines of HTML:
 ```
-<li class="email-nav">johndoe@gmail.com
-    <img src="./assets/icons/flechita.svg" alt="">
+<li class="navbar-shopping-cart">
+  <img src="../resources/icons/flechita.svg" alt="arrow">
 </li>
 ```
 
 Their styles are:
 ```
-.email-nav img {
-    margin-left: 10px;
-    transform: rotate(90deg);
+.navbar-shopping-cart img:nth-child(1){
+  margin-right: 24px;
+  transform: rotate(90deg);
 }
 ```
 
 <br>
 <br>
 
-  ## [Product Details](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
+  ## [Product Details](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/12.html)
+It's time to create the product detail view, which allows the user to get more information about an item represented with text. This screen is the same across all devices. It contains an image, text, and a button.
+
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/details.png?raw=true" width= "100%" alt="Details">
+</p>
+
+<br>
+
+  ### Using aside in HTML5
+We can include this view within the aside tag because this element represents a section of the page consisting of content that is indirectly related to the main content of the document.
+
+We need to consider that the product description is variable, and it's important to ensure it looks good with different amounts of text. For this, we can use Lorem Ipsum placeholder text.
+
+In Visual Studio Code:
+
+```
+<p>lorem*cantidadDeLineas</p>
+```
+The complete structure is:
+```
+<aside class="product-detail">
+    <div class="product-detail-close">
+      <img src="./icons/icon_close.png" alt="close">
+    </div>
+    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+    <div class="product-info">
+      <p>$35.00</p>
+      <p>Bike</p>
+      <p>With its practical position, this bike also fulfills a decorative function, add your hall or workspace.</p>
+      <button class="primary-button add-to-cart-button">
+        <img src="./icons/bt_add_to_cart.svg" alt="add to cart">
+        Add to cart
+      </button>
+    </div>
+</aside>
+```
+
+<br>
+
+  ### How to Style an aside Component
+For the aside in our case, the product detail, we can reuse some of the styles we've already defined to maintain a uniform tone in the online store.
+
+The steps you should follow are:
+
+Add the class “primary-button” to the button and then add another to implement Flexbox
+
+```
+.primary-button {
+   background-color: var(--hospital-green);
+   border-radius: 8px;
+   border: none;
+   color: var(--white);
+   width: 100%;
+   cursor: pointer;
+   font-size: var(--md);
+   font-weight: bold;
+   height: 50px;
+}
+.add-to-cart-button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+```
+
+Style the image and the close "x"
+Since we have more than one image within the same container class, we use the child combinator selector.
+
+```
+.product-detail {
+   width: 360px;
+   padding-bottom: 24px;
+   position: absolute;
+   right: 0;
+}
+.product-detail-close {
+   background: var(--white);
+   width: 14px;
+   height: 14px;
+   position: absolute;
+   top: 24px;
+   left: 24px;
+   z-index: 2;
+   padding: 12px;
+   border-radius: 50%;
+}
+.product-detail-close:hover {
+   cursor: pointer;
+}
+.product-detail > img:nth-child(2) {
+   width: 100%;
+   height: 360px;
+   object-fit: cover;
+   border-radius: 0 0 20px 20px;
+}
+```
+Continue with the part that displays the information
+
+```
+.product-info {
+   margin: 24px 24px 0 24px;
+}
+.product-info p:nth-child(1) {
+   font-weight: bold;
+   font-size: var(--md);
+   margin-top: 0;
+   margin-bottom: 4px;
+}
+.product-info p:nth-child(2) {
+   color: var(--very-light-pink);
+   font-size: var(--md);
+   margin-top: 0;
+   margin-bottom: 36px;
+}
+.product-info p:nth-child(3) {
+   color: var(--very-light-pink);
+   font-size: var(--sm);
+   margin-top: 0;
+   margin-bottom: 36px;
+}
+```
+
+Modify the width to occupy 100% of the screen on a mobile device
+
+```
+@media (max-width: 640px) {
+   .product-detail {
+     width: 100%;
+   }
+}
+```
+
+Slider with Product Images
+So far, the detail view only has one image, but it's very common to have more. This way, the user can get a clearer idea of what they are about to buy. The design suggests this with the "dots" that appear below the refrigerator.
+
+One way to achieve this is by adding the following lines to the HTML right below the img tag:
+
+```
+<div class="dots">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+
+```
+These are the styles:
+
+```
+.dots {
+    text-align: center;
+}
+.dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    background-color: var(--very-light-pink);
+    border-radius: 50%;
+    display: inline-block;
+}
+.dots span:nth-child(1) {
+    background-color: var(--hospital-green);
+}
+```
+But, how do we make another image appear when clicking on a dot? By implementing JavaScript, for example. This is an exciting concept to delve deeper into.
 
 <br>
 <br>
