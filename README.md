@@ -1852,7 +1852,7 @@ The shopping cart is the section of the page that allows the user to see the pro
 We just need to create our cart screen to complete our page. As mentioned, it is a very similar process to the previous ones, and we can reuse the code from "my orders."
 
 <p align="center">
-  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/selectors-combiners.png?raw=true" width= "50%" alt="Details">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/cart.png?raw=true" width= "50%" alt="Cart">
 </p>
 
 <br>
@@ -1971,6 +1971,8 @@ The suggested CSS is:
   }
 }
 ```
+
+<br>
 
   ### What is transform in CSS?
 Transform is a CSS property that allows us to translate, rotate, scale, or skew elements. It is mainly used to create animations. We use it to rotate the arrow.
