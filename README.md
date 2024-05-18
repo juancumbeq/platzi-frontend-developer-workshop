@@ -1675,7 +1675,7 @@ Their styles are:
 <br>
 <br>
 
-  ## [Product Details](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/12.html)
+  ## [Product Details](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/12-product-details.html)
 It's time to create the product detail view, which allows the user to get more information about an item represented with text. This screen is the same across all devices. It contains an image, text, and a button.
 
 <p align="center">
