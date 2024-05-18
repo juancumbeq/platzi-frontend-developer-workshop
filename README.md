@@ -1689,7 +1689,7 @@ We can include this view within the aside tag because this element represents a 
 
 We need to consider that the product description is variable, and it's important to ensure it looks good with different amounts of text. For this, we can use Lorem Ipsum placeholder text.
 
-In Visual Studio Code: ```<p>lorem*cantidadDeLineas</p>```
+In Visual Studio Code: ```<p>lorem*cantidadDeParrafos</p>```
 
 The complete structure is:
 ```
