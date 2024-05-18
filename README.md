@@ -1846,7 +1846,134 @@ But, how do we make another image appear when clicking on a dot? By implementing
 <br>
 <br>
 
-  ## [Shopping Cart: HTML](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/6-home-page.html)
+  ## [Shopping Cart: HTML](https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/project/13-shopping-cart.html)
+The shopping cart is the section of the page that allows the user to see the products they added because they want to buy them. As you can see in the image, it is very similar to the "my order" section, so we will use the same code.
+
+We just need to create our cart screen to complete our page. As mentioned, it is a very similar process to the previous ones, and we can reuse the code from "my orders."
+
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/selectors-combiners.png?raw=true" width= "50%" alt="Details">
+</p>
+
+<br>
+
+  ### Basic HTML Layout for a Shopping Cart
+It's time to layout this section of the platform in HTML. Use these lines of code as a guide to ensure you've done a great job, and remember not to memorize them to ensure that you've learned correctly.
+```
+<aside class="product-detail">
+  <div class="title-container">
+    <img src="./icons/flechita.svg" alt="arrow">
+    <p class="title">My order</p>
+  </div>
+
+  <div class="my-order-content">
+    
+    <div class="shopping-cart">
+      <figure>
+        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+      </figure>
+      <p>Bike</p>
+      <p>$30.00</p>
+      <img src="./icons/icon_close.png" alt="close">
+    </div>
+    
+    <button class="primary-button">
+      Checkout
+    </button>
+  </div>
+</aside>
+```
+
+<br>
+
+  ### CSS Styles for a Shopping Cart
+The CSS styles for the cart are practically the same as for the section that shows the user their order.
+
+The suggested CSS is:
+```
+.product-detail {
+  width: 360px;
+  padding: 24px;
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+}
+.title-container {
+  display: flex;
+}
+.title-container img {
+  transform: rotate(180deg);
+  margin-right: 14px;
+}
+.title {
+  font-size: var(--lg);
+  font-weight: bold;
+}
+.order {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+  background-color: var(--text-input-field);
+  margin-bottom: 24px;
+  border-radius: 8px;
+  padding: 0 24px;
+}
+.order p:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+.order p span:nth-child(1) {
+  font-size: var(--md);
+  font-weight: bold;
+}
+.order p:nth-child(2) {
+  text-align: end;
+  font-weight: bold;
+}
+.shopping-cart {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+.shopping-cart figure {
+  margin: 0;
+}
+.shopping-cart figure img {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.shopping-cart p:nth-child(2) {
+  color: var(--very-light-pink);
+}
+.shopping-cart p:nth-child(3) {
+  font-size: var(--md);
+  font-weight: bold;
+}
+.primary-button {
+  background-color: var(--hospital-green);
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+  width: 100%;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+  height: 50px;
+}
+@media (max-width: 640px) {
+  .product-detail {
+    width: 100%;
+  }
+}
+```
+
+  ### What is transform in CSS?
+Transform is a CSS property that allows us to translate, rotate, scale, or skew elements. It is mainly used to create animations. We use it to rotate the arrow.
 
 <br>
 <br>
