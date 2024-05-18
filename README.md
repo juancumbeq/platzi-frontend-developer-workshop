@@ -1679,7 +1679,7 @@ Their styles are:
 It's time to create the product detail view, which allows the user to get more information about an item represented with text. This screen is the same across all devices. It contains an image, text, and a button.
 
 <p align="center">
-  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/details.png?raw=true" width= "100%" alt="Details">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/details.png?raw=true" width= "50%" alt="Details">
 </p>
 
 <br>
@@ -1689,11 +1689,8 @@ We can include this view within the aside tag because this element represents a 
 
 We need to consider that the product description is variable, and it's important to ensure it looks good with different amounts of text. For this, we can use Lorem Ipsum placeholder text.
 
-In Visual Studio Code:
+In Visual Studio Code: ```<p>lorem*cantidadDeLineas</p>```
 
-```
-<p>lorem*cantidadDeLineas</p>
-```
 The complete structure is:
 ```
 <aside class="product-detail">
@@ -1720,8 +1717,7 @@ For the aside in our case, the product detail, we can reuse some of the styles w
 
 The steps you should follow are:
 
-Add the class “primary-button” to the button and then add another to implement Flexbox
-
+  * Add the class “primary-button” to the button and then add another to implement Flexbox
 ```
 .primary-button {
    background-color: var(--hospital-green);
@@ -1741,8 +1737,12 @@ Add the class “primary-button” to the button and then add another to impleme
 }
 ```
 
-Style the image and the close "x"
+  * Style the image and the close "x"
 Since we have more than one image within the same container class, we use the child combinator selector.
+
+<p align="center">
+  <img src="https://github.com/juancumbeq/platzi-frontend-developer-workshop/blob/main/readme_images/selectors-combiners.png?raw=true" width= "50%" alt="Details">
+</p>
 
 ```
 .product-detail {
@@ -1772,8 +1772,8 @@ Since we have more than one image within the same container class, we use the ch
    border-radius: 0 0 20px 20px;
 }
 ```
-Continue with the part that displays the information
 
+  * Continue with the part that displays the information
 ```
 .product-info {
    margin: 24px 24px 0 24px;
@@ -1798,8 +1798,7 @@ Continue with the part that displays the information
 }
 ```
 
-Modify the width to occupy 100% of the screen on a mobile device
-
+  * Modify the width to occupy 100% of the screen on a mobile device
 ```
 @media (max-width: 640px) {
    .product-detail {
@@ -1808,7 +1807,9 @@ Modify the width to occupy 100% of the screen on a mobile device
 }
 ```
 
-Slider with Product Images
+<br>
+
+  ### Slider with Product Images
 So far, the detail view only has one image, but it's very common to have more. This way, the user can get a clearer idea of what they are about to buy. The design suggests this with the "dots" that appear below the refrigerator.
 
 One way to achieve this is by adding the following lines to the HTML right below the img tag:
