@@ -1981,14 +1981,6 @@ Transform is a CSS property that allows us to translate, rotate, scale, or skew 
 <br>
 <br>
 
-# NEXT STEPS
-
-
-
-<br>
-<br>
-<br>
-
 # AUTHOR
 
 This project was developed by *Juan Cumbe*. If you have any questions or suggestions about the project, feel free to contact me via [e-mail](mailto:hello@juancumbe.com) or my [Linkedin](https://www.linkedin.com/in/juancumbeq/) profile. 
