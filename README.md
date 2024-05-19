@@ -8,10 +8,10 @@
 
 This is the first of four courses where Platzi will guide you step-by-step to build a web application or virtual store.
 
-Layout Design → you are here
-React
-REST API with Express.js
-Database with PostgreSQL
+  - Layout Design → you are here
+  - React
+  - REST API with Express.js
+  - Database with PostgreSQL
 
 <br>
 
