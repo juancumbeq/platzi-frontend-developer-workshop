@@ -17,23 +17,86 @@ Base de Datos con PostgreSQL
 <br>
 
 ## What did I Learn Through this Course:
-  - Introducction to frontend development
   - HTML layout
   - CSS layout
   - Responsive Design
-  - CSS architecture
 
 <br>
 <br>
 
-## Index
-  - [INTRODUCCTION TO FRONTEND DEVELOPMENT](#introduction-to-frontend-development)
-    - [What are HTML and CSS? What are they used for?](#what-is-html-and-css-what-are-they-used-for)
-      - [What is HTML?](#what-is-html)
-      - [What is CSS?](#what-is-css)
-    - [Render Engines: From Files to Pixels](#render-engines-from-files-to-pixels)
-      - [Which is the browser engine?](#which-is-the-browser-engine)
-      - [Rendering Process](#rendering-process)
+## INDEX
+- [INTRODUCTION](#introduction)
+  - [CSS Good Practices: Reflection and Warning](#css-good-practices-reflection-and-warning)
+    - [What is a good practice?](#what-is-a-good-practice)
+    - [The context of this course](#the-context-of-this-course)
+    - [Style tag vs. .css files](#style-tag-vs-css-files)
+    - [Conclusions](#conclusions)
+
+- [LAYOUT AND COMPONENTS](#layout-and-components)
+  - [Identify your Project Screens](#identify-your-project-screens)
+  - [Design System, Assets and CSS Variables](#design-system-assets-and-css-variables)
+    - [What's the purpose of a design system?](#whats-the-purpose-of-a-design-system)
+    - [CSS Variables](#css-variables)
+    - [Fonts](#fonts)
+
+- [RESPONSIVE LAYOUT: AUTHENTICATION SCREENS](#responsive-layout-authentication-screens)
+  - [Create New Password: HTML](#create-new-password-html)
+  - [Create New Password: CSS](#create-new-password-css)
+    - [Using Grid display to center elements](#using-grid-display-to-center-elements)
+    - [How to organize styles](#how-to-organize-styles)
+  - [Mail Sent](#mail-sent)
+    - [CSS code](#css-code)
+    - [Responsive design](#responsive-design)
+    - [HTML code](#html-code)
+    - [CSS code](#css-code-1)
+    - [Types of positioning in HTML](#types-of-positioning-in-html)
+  - [Create and Edit my Account](#create-and-edit-my-account)
+    - [How to layout a registration form](#how-to-layout-a-registration-form)
+    - [Styles for the registration form:](#styles-for-the-registration-form)
+    - [How to align the form button?](#how-to-align-the-form-button)
+  - [My Account](#my-account)
+    - [How to show the user the entered data](#how-to-show-the-user-the-entered-data)
+    - [How to proceed with the project](#how-to-proceed-with-the-project)
+
+- [RESPONSIVE LAYOUT: MAIN VIEWS](#responsive-layout-main-views)
+  - [Home Page: HTML](#home-page-html)
+    - [How to create the HTML structure of the homepage:](#how-to-create-the-html-structure-of-the-homepage)
+    - [How to Place Images in HTML:](#how-to-place-images-in-html)
+    - [Which Containers to Use?](#which-containers-to-use)
+  - [Home Page: CSS](#home-page-css)
+    - [How to implement CSS Grid to center multiple images:](#how-to-implement-css-grid-to-center-multiple-images)
+    - [Same class, different styles:](#same-class-different-styles)
+    - [Responsive homepage with just 8 lines of code:](#responsive-homepage-with-just-8-lines-of-code)
+  - [Desktop Menu](#desktop-menu)
+    - [How to create a dropdown list in HTML5:](#how-to-create-a-dropdown-list-in-html5)
+    - [CSS styles for lists inside the menu:](#css-styles-for-lists-inside-the-menu)
+  - [Mobile Menu](#mobile-menu)
+    - [Semantic structure of a menu for mobile devices:](#semantic-structure-of-a-menu-for-mobile-devices)
+    - [CSS Specificity:](#css-specificity)
+  - [My Purchase Order: HTML](#my-purchase-order-html)
+    - [How to layout an order page in HTML](#how-to-layout-an-order-page-in-html)
+  - [My Purchase Order: CSS](#my-purchase-order-css)
+    - [How to apply CSS to a purchase order](#how-to-apply-css-to-a-purchase-order)
+    - [What does object-fit achieve in CSS?](#what-does-object-fit-achieve-in-css)
+  - [My Orders](#my-orders)
+    - [HTML to display the purchase orders](#html-to-display-the-purchase-orders)
+    - [CSS styles to create lists of requested orders](#css-styles-to-create-lists-of-requested-orders)
+  - [Navbar: HTML](#navbar-html)
+    - [How to create a menu in HTML5](#how-to-create-a-menu-in-html5)
+  - [Navbar: CSS](#navbar-css)
+    - [Basic CSS styles for the menu](#basic-css-styles-for-the-menu)
+    - [How to center the shopping cart in the navigation bar](#how-to-center-the-shopping-cart-in-the-navigation-bar)
+    - [Bonus: Dropdown list in the menu](#bonus-dropdown-list-in-the-menu)
+  - [Product Details](#product-details)
+    - [Using aside in HTML5](#using-aside-in-html5)
+    - [How to style an aside Component](#how-to-style-an-aside-component)
+    - [Slider with product images](#slider-with-product-images)
+  - [Shopping Cart: HTML](#shopping-cart-html)
+    - [Basic HTML layout for a shopping cart](#basic-html-layout-for-a-shopping-cart)
+    - [CSS styles for a shopping cart](#css-styles-for-a-shopping-cart)
+    - [What is transform in CSS?](#what-is-transform-in-css)
+- [AUTHOR](#author)
+
 
 <br>
 <br>
@@ -64,6 +127,7 @@ Base de Datos con PostgreSQL
   ## Product Details
   ## Shopping Cart: HTML
 # NEXT STEPS
+
 
 <br>
 <br>
@@ -361,7 +425,7 @@ Which styles will we implement?
 
 <br>
 
-  ### Using Grid Display to Center Elements
+  ### Using Grid display to center elements
 As you can see in our ``.login`` class, with just two lines of code, we can center our content:
 ```
 display: grid;
@@ -379,7 +443,7 @@ Try different combinations and see what happens:
 
 <br>
 
-  ### How to Organize Styles
+  ### How to organize styles
 One way to do it is according to its purpose. Following the following order:
 
   * Positioning
@@ -423,7 +487,7 @@ Now we will build the screen where the email has been sent by reusing the code. 
 ```
 <br>
 
-  ### CSS Code
+  ### CSS code
 ```
 .login {
       width: 100%;
@@ -502,7 +566,7 @@ Now we will build the screen where the email has been sent by reusing the code. 
 ```
 <br>
 
-  ### Responsive Design
+  ### Responsive design
 Our project is responsive, meaning it adapts to different screen sizes. To achieve this, we implemented media queries.
 ```
 @media (max-width: 640px)
@@ -526,7 +590,7 @@ Now we will work on styling the login screen. This is where users will be able t
 
 <br>
 
-  ### HTML Code
+  ### HTML code
 As we can see in the image, we have a logo, two inputs, a button with text below it, and another button that in its mobile version moves to the bottom of the screen.
 ```
 <div class="login">
@@ -551,7 +615,7 @@ As we can see in the image, we have a logo, two inputs, a button with text below
 
 <br>
 
-  ### CSS Code
+  ### CSS code
 ```
 .login {
   width: 100%;
@@ -666,7 +730,7 @@ We will layout the view that will allow the user to create or edit their account
 
 <br>
 
-   ### How to Layout a Registration Form
+   ### How to layout a registration form
 To layout this form, you can refer to the code generated for the login view. Remove the logo and subtitle from this structure, and it should look like this:
 ```
 <div class="login">
@@ -693,7 +757,7 @@ Finally, before the closing form tag, add the button so the user can submit the 
 
 <br>
 
-   ### Styles for the Registration Form:
+   ### Styles for the registration form:
 We'll add some more styles to the ones we used previously in the "new password" section to format this section.
 
 Adjustments include:
@@ -716,7 +780,7 @@ Adjustments include:
 ```
 <br>
 
-  ### How to Align the Form Button?
+  ### How to align the form button?
 Similar to the previous challenge, in its mobile version, this screen moves the button away from the form by placing it at the bottom. One of the simplest and most effective ways to do this is by using Flexbox.
 
 We start by giving our container and form a height of 100%. Since the form is already flexible and has a column direction, we just need to add in the media query: justify-content: space-between.
@@ -737,7 +801,7 @@ This time I'll teach you how to layout the screen that allows the user to edit t
 
 <br>
 
-  ### How to Show the User the Entered Data
+  ### How to show the user the entered data
 To show the user the data they entered during registration, we'll use the code from the "create account" section. Keeping in mind that the purpose of this view is to display information, not obtain it, we need to modify the form as follows:
 
   * We'll change the inputs to paragraphs:
@@ -779,7 +843,7 @@ To show the user the data they entered during registration, we'll use the code f
 ```
 <br>
 
-  ### How to Proceed With the Project
+  ### How to proceed with the project
 We have completed the module for creating authentication screens. Now, all that's left is to build the main views. Remember that in the Practical React.js Course, we will combine all the screens to finish our frontend.
 
 <br>
@@ -798,7 +862,7 @@ In this new module, we will work on the main views. We start with the HTML for t
 
 <br>
 
-  ### How to create the HTML Structure of the homepage:
+  ### How to create the HTML structure of the homepage:
 
 These are the steps to follow to layout the sections of an e-commerce. Let's get started!
 
@@ -826,7 +890,7 @@ These are the steps to follow to layout the sections of an e-commerce. Let's get
 
 <br>
 
-  ### How to Place Images in HTML:
+  ### How to place images in HTML:
 
 The HTML img element embeds an image into a document. Its "src" attribute is used to specify where the image is located, whether in a folder or a URL.
 
@@ -836,7 +900,7 @@ Review this information here 👈
 
 <br>
 
-  ### Which Containers to Use?
+  ### Which containers to use?
 
 There are two tags that allow us to organize images in a semantic way.
 
@@ -1541,7 +1605,7 @@ It's time to modify the styles of our menu. The challenge is to align it with th
 
 <br>
 
-  ### Basic CSS Styles for the Menu
+  ### Basic CSS styles for the menu
 Styling a menu is very simple with CSS3. We need to align the elements in a horizontal bar so that they occupy the entire width of the screen.
 
 How do we style this menu? Follow these steps:
@@ -1625,7 +1689,7 @@ nav {
 ```
 <br>
 
-  ### How to Center the Shopping Cart in the Navigation Bar
+  ### How to center the shopping cart in the navigation bar
 The main challenge is to position the shopping cart next to the number. This is the counter that will show the user how many items have been added to their order.
 
 To achieve this, we will use position: relative and absolute.
@@ -1650,7 +1714,7 @@ To achieve this, we will use position: relative and absolute.
 ```
 <br>
 
-  ### Bonus: Dropdown List in the Menu
+  ### Bonus: Dropdown list in the menu
 The design recommended that next to the email address, there should be an arrow that allows the user to expand the menu with options: "my orders", "my account", and "sign-out".
 
 <p align="center">
@@ -1712,7 +1776,7 @@ The complete structure is:
 
 <br>
 
-  ### How to Style an aside Component
+  ### How to style an aside Component
 For the aside in our case, the product detail, we can reuse some of the styles we've already defined to maintain a uniform tone in the online store.
 
 The steps you should follow are:
@@ -1809,7 +1873,7 @@ Since we have more than one image within the same container class, we use the ch
 
 <br>
 
-  ### Slider with Product Images
+  ### Slider with product images
 So far, the detail view only has one image, but it's very common to have more. This way, the user can get a clearer idea of what they are about to buy. The design suggests this with the "dots" that appear below the refrigerator.
 
 One way to achieve this is by adding the following lines to the HTML right below the img tag:
@@ -1857,7 +1921,7 @@ We just need to create our cart screen to complete our page. As mentioned, it is
 
 <br>
 
-  ### Basic HTML Layout for a Shopping Cart
+  ### Basic HTML layout for a shopping cart
 It's time to layout this section of the platform in HTML. Use these lines of code as a guide to ensure you've done a great job, and remember not to memorize them to ensure that you've learned correctly.
 ```
 <aside class="product-detail">
@@ -1886,7 +1950,7 @@ It's time to layout this section of the platform in HTML. Use these lines of cod
 
 <br>
 
-  ### CSS Styles for a Shopping Cart
+  ### CSS styles for a shopping cart
 The CSS styles for the cart are practically the same as for the section that shows the user their order.
 
 The suggested CSS is:
