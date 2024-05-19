@@ -97,38 +97,6 @@ Base de Datos con PostgreSQL
     - [What is transform in CSS?](#what-is-transform-in-css)
 - [AUTHOR](#author)
 
-
-<br>
-<br>
-<br>
-
-# INTRODUCTION
-  ## CSS Good Practices: Reflection and Warning
-# LAYOUT AND COMPONENTS
-  ## Identify your Project Screens
-  ## Design System, Assets and CSS Variables
-# RESPONSIVE LAYOUT: AUTHENTICATION SCREENS
-  ## Create New Password: HTML
-  ## Create New Password: CSS
-  ## Mail sent
-  ## Login
-  ## Create and Edit my Account
-  ## My Account
-# RESPONSIVE LAYOUT: MAIN VIEWS
-  ## Home Page: HTML
-  ## Home Page: CS
-  ## Desktop Menu
-  ## Mobile Menu
-  ## My Purchase Order: HTML
-  ## My Purchase Order: CSS
-  ## My Orders
-  ## Navbar: HTML
-  ## Navbar: CSS
-  ## Product Details
-  ## Shopping Cart: HTML
-# NEXT STEPS
-
-
 <br>
 <br>
 <br>
