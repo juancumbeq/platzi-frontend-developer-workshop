@@ -6,13 +6,12 @@
 
 <br>
 
-Aclaración sobre los siguientes pasos
-Este es el primero de cuatro cursos, en los que Platzi te llevará de la mano para que puedas tener construir una aplicación web o tienda virtual.
+This is the first of four courses where Platzi will guide you step-by-step to build a web application or virtual store.
 
-Maquetado → estás aquí
+Layout Design → you are here
 React
-API REST con Express.js
-Base de Datos con PostgreSQL
+REST API with Express.js
+Database with PostgreSQL
 
 <br>
 
