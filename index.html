@@ -40,57 +40,39 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 15px;
-      width: 75%;
+      width: 50%;
     }
     .view{
       width: 100%;
       background-color: var(--white);
       padding: 4px;
     }
-    .primary-button{
-      width: 100%;
-      background-color: var(--white);
-      border: 1px solid var(--hospital-green);
-      padding: 8px;
-      border-radius: 24px;
-      cursor: pointer;
-    }
-    .primary-button:hover{
-      background-color: var(--hospital-green);
-    }
     .link{
       display: flex;
       flex-direction: row;
       text-decoration: none;
+      background-color: var(--white);
+      border: 1px solid var(--hospital-green);
       color: var(--black);
       font-size: var(--md);
+      padding: 8px;
+      border-radius: 24px;
+      cursor: pointer;
+    }
+    .link:hover{
+      background-color: var(--hospital-green);
+      color: var(--white);
+    }
+    .link img:nth-child(2){
+      margin-left: 10px;
     }
 
-    
-    /* 
-    .view{
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      gap: 16px;
-      align-items: center;
-      margin-bottom: 12px;
+    @media (max-width: 640px) {
+      .views-container{
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+      }
     }
-    .view p:nth-child(1){
-      display: flex;
-      flex-direction: column;
-    }
-    .view p span:nth-child(1){
-      font-size: var(--md);
-      font-weight: bold;
-    }
-    .view p span:nth-child(2){
-      font-size: var(--sm);
-      color: var(--very-light-pink);
-    }
-    .view p:nth-child(2){
-      text-align: end;
-      font-weight: bold;
-    } */
   </style>
 
 </head>
@@ -100,84 +82,91 @@
     <div class="views-container">
 
       <div class="view">
-        <a href="" class='link'>
+        <a href="https://juancumbeq.github.io/platzi-frontend-developer-workshop/project/1-create-new-password.html" class='link'>
           <p><span>Create new password</span></p>
           <img src="./resources/icons/flechita.svg" alt="Arrow">
         </a>
       </div>
 
       <div class="view">
-        <a href="" class='link'>
+        <a href="https://juancumbeq.github.io/platzi-frontend-developer-workshop/project/2-mail-sent.html" class='link'>
           <p><span>Mail sent</span></p>
           <img src="./resources/icons/flechita.svg" alt="Arrow">
         </a>
       </div>
 
       <div class="view">
-        <a href="" class='link'>
+        <a href="https://juancumbeq.github.io/platzi-frontend-developer-workshop/project/3-login.html" class='link'>
           <p><span>Login</span></p>
           <img src="./resources/icons/flechita.svg" alt="Arrow">
         </a>
       </div>
 
       <div class="view">
-        <a href="" class='link'>
+        <a href="https://juancumbeq.github.io/platzi-frontend-developer-workshop/project/4-create-account.html" class='link'>
           <p><span>Create account</span></p>
           <img src="./resources/icons/flechita.svg" alt="Arrow">
         </a>
       </div>
 
       <div class="view">
-        <a href="" class='link'>
+        <a href="https://juancumbeq.github.io/platzi-frontend-developer-workshop/project/5-my-account.html" class='link'>
+          <p><span>My account</span></p>
+          <img src="./resources/icons/flechita.svg" alt="Arrow">
+        </a>
+      </div>
+
+      <div class="view">
+        <a href="https://juancumbeq.github.io/platzi-frontend-developer-workshop/project/6-home-page.html" class='link'>
           <p><span>Home page</span></p>
           <img src="./resources/icons/flechita.svg" alt="Arrow">
         </a>
       </div>
 
       <div class="view">
-        <a href="" class='link'>
+        <a href="https://juancumbeq.github.io/platzi-frontend-developer-workshop/project/7-dropdown-menu-desktop.html" class='link'>
           <p><span>Desktop dropdown menu</span></p>
           <img src="./resources/icons/flechita.svg" alt="Arrow">
         </a>
       </div>
 
       <div class="view">
-        <a href="" class='link'>
+        <a href="https://juancumbeq.github.io/platzi-frontend-developer-workshop/project/8-mobile-menu.html" class='link'>
           <p><span>Mobile menu</span></p>
           <img src="./resources/icons/flechita.svg" alt="Arrow">
         </a>
       </div>
 
       <div class="view">
-        <a href="" class='link'>
+        <a href="https://juancumbeq.github.io/platzi-frontend-developer-workshop/project/9-my-order.html" class='link'>
           <p><span>My order</span></p>
           <img src="./resources/icons/flechita.svg" alt="Arrow">
         </a>
       </div>
 
       <div class="view">
-        <a href="" class='link'>
+        <a href="https://juancumbeq.github.io/platzi-frontend-developer-workshop/project/10-myorders.html" class='link'>
           <p><span>My orders</span></p>
           <img src="./resources/icons/flechita.svg" alt="Arrow">
         </a>
       </div>
 
       <div class="view">
-        <a href="" class='link'>
+        <a href="https://juancumbeq.github.io/platzi-frontend-developer-workshop/project/11-navbar.html" class='link'>
           <p><span>Navbar</span></p>
           <img src="./resources/icons/flechita.svg" alt="Arrow">
         </a>
       </div>
 
       <div class="view">
-        <a href="" class='link'>
+        <a href="https://juancumbeq.github.io/platzi-frontend-developer-workshop/project/12-product-details.html" class='link'>
           <p><span>Product details</span></p>
           <img src="./resources/icons/flechita.svg" alt="Arrow">
         </a>
       </div>
 
       <div class="view">
-        <a href="" class='link'>
+        <a href="https://juancumbeq.github.io/platzi-frontend-developer-workshop/project/13-shopping-cart.html" class='link'>
           <p><span>Shopping cart</span></p>
           <img src="./resources/icons/flechita.svg" alt="Arrow">
         </a>
