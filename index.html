@@ -26,22 +26,52 @@
     .views{
       width: 100%;
       height: 100vh;
-      display: grid;
-      place-items: center;
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
     .title{
       font-size: var(--lg);
+      margin-top: 40px;
       margin-bottom: 40px;
     }
     .views-container{
       display: grid;
-      grid-template-rows: auto 1fr;
-      width: 300px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 15px;
+      width: 75%;
     }
-    .views-content{
+    .view{
+      width: 100%;
+      background-color: var(--white);
+      padding: 4px;
+    }
+    .primary-button{
+      width: 100%;
+      background-color: var(--white);
+      border: 1px solid var(--hospital-green);
+      padding: 8px;
+      border-radius: 24px;
+      
+
+      cursor: pointer;
+      font-size: var(--md);
+
+    }
+    .primary-button:hover{
+      border: 1px solid var(--hospital-green);
+      color: var(--hospital-green);
+    }
+    .link{
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      text-decoration: none;
+      color: var(--black);
     }
+
+    
+    /* 
     .view{
       display: grid;
       grid-template-columns: auto 1fr auto;
@@ -64,126 +94,123 @@
     .view p:nth-child(2){
       text-align: end;
       font-weight: bold;
-    }
+    } */
   </style>
 
 </head>
 <body>
   <div class="views">
+    <h1 class="title">Views</h1>
     <div class="views-container">
-      <h1 class="title">Views:</h1>
 
-      <div class="views-content">
-
-        <div class="view">
-          <button>
-            <a href="">
-              <p><span>Create new password</span></p>
-              <img src="./resources/icons/flechita.svg" alt="Arrow">
-            </a>
-          </button>
-        </div>
-
-        <div class="view">
-          <button>
-            <a href="">
-              <p><span>Mail sent</span></p>
-              <img src="./resources/icons/flechita.svg" alt="Arrow">
-            </a>
-          </button>
-        </div>
-
-        <div class="view">
-          <button>
-            <a href="">
-              <p><span>Login</span></p>
-              <img src="./resources/icons/flechita.svg" alt="Arrow">
-            </a>
-          </button>
-        </div>
-
-        <div class="view">
-          <button>
-            <a href="">
-              <p><span>Create account</span></p>
-              <img src="./resources/icons/flechita.svg" alt="Arrow">
-            </a>
-          </button>
-        </div>
-
-        <div class="view">
-          <button>
-            <a href="">
-              <p><span>Home page</span></p>
-              <img src="./resources/icons/flechita.svg" alt="Arrow">
-            </a>
-          </button>
-        </div>
-
-        <div class="view">
-          <button>
-            <a href="">
-              <p><span>Desktop dropdown menu</span></p>
-              <img src="./resources/icons/flechita.svg" alt="Arrow">
-            </a>
-          </button>
-        </div>
-
-        <div class="view">
-          <button>
-            <a href="">
-              <p><span>Mobile menu</span></p>
-              <img src="./resources/icons/flechita.svg" alt="Arrow">
-            </a>
-          </button>
-        </div>
-
-        <div class="view">
-          <button>
-            <a href="">
-              <p><span>My order</span></p>
-              <img src="./resources/icons/flechita.svg" alt="Arrow">
-            </a>
-          </button>
-        </div>
-
-        <div class="view">
-          <button>
-            <a href="">
-              <p><span>My orders</span></p>
-              <img src="./resources/icons/flechita.svg" alt="Arrow">
-            </a>
-          </button>
-        </div>
-
-        <div class="view">
-          <button>
-            <a href="">
-              <p><span>Navbar</span></p>
-              <img src="./resources/icons/flechita.svg" alt="Arrow">
-            </a>
-          </button>
-        </div>
-
-        <div class="view">
-          <button>
-            <a href="">
-              <p><span>Product details</span></p>
-              <img src="./resources/icons/flechita.svg" alt="Arrow">
-            </a>
-          </button>
-        </div>
-
-        <div class="view">
-          <button>
-            <a href="">
-              <p><span>Shopping cart</span></p>
-              <img src="./resources/icons/flechita.svg" alt="Arrow">
-            </a>
-          </button>
-        </div>
-
+      <div class="view">
+        <button class="primary-button">
+          <a href="" class='link'>
+            <p><span>Create new password</span></p>
+            <img src="./resources/icons/flechita.svg" alt="Arrow">
+          </a>
+        </button>
       </div>
+
+      <div class="view">
+        <button class="primary-button">
+          <a href="" class='link'>
+            <p><span>Mail sent</span></p>
+            <img src="./resources/icons/flechita.svg" alt="Arrow">
+          </a>
+        </button>
+      </div>
+
+      <div class="view">
+        <button class="primary-button">
+          <a href="" class='link'>
+            <p><span>Login</span></p>
+            <img src="./resources/icons/flechita.svg" alt="Arrow">
+          </a>
+        </button>
+      </div>
+
+      <div class="view">
+        <button class="primary-button">
+          <a href="" class='link'>
+            <p><span>Create account</span></p>
+            <img src="./resources/icons/flechita.svg" alt="Arrow">
+          </a>
+        </button>
+      </div>
+
+      <div class="view">
+        <button class="primary-button">
+          <a href="" class='link'>
+            <p><span>Home page</span></p>
+            <img src="./resources/icons/flechita.svg" alt="Arrow">
+          </a>
+        </button>
+      </div>
+
+      <div class="view">
+        <button class="primary-button">
+          <a href="" class='link'>
+            <p><span>Desktop dropdown menu</span></p>
+            <img src="./resources/icons/flechita.svg" alt="Arrow">
+          </a>
+        </button>
+      </div>
+
+      <div class="view">
+        <button class="primary-button">
+          <a href="" class='link'>
+            <p><span>Mobile menu</span></p>
+            <img src="./resources/icons/flechita.svg" alt="Arrow">
+          </a>
+        </button>
+      </div>
+
+      <div class="view">
+        <button class="primary-button">
+          <a href="" class='link'>
+            <p><span>My order</span></p>
+            <img src="./resources/icons/flechita.svg" alt="Arrow">
+          </a>
+        </button>
+      </div>
+
+      <div class="view">
+        <button class="primary-button">
+          <a href="" class='link'>
+            <p><span>My orders</span></p>
+            <img src="./resources/icons/flechita.svg" alt="Arrow">
+          </a>
+        </button>
+      </div>
+
+      <div class="view">
+        <button class="primary-button">
+          <a href="" class='link'>
+            <p><span>Navbar</span></p>
+            <img src="./resources/icons/flechita.svg" alt="Arrow">
+          </a>
+        </button>
+      </div>
+
+      <div class="view">
+        <button class="primary-button">
+          <a href="" class='link'>
+            <p><span>Product details</span></p>
+            <img src="./resources/icons/flechita.svg" alt="Arrow">
+          </a>
+        </button>
+      </div>
+
+      <div class="view">
+        <button class="primary-button">
+          <a href="" class='link'>
+            <p><span>Shopping cart</span></p>
+            <img src="./resources/icons/flechita.svg" alt="Arrow">
+          </a>
+        </button>
+      </div>
+
     </div>
   </div>
 </body>
