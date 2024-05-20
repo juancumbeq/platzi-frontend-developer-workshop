@@ -20,6 +20,8 @@ This is the first of four courses where Platzi will guide you step-by-step to bu
   - CSS layout
   - Responsive Design
 
+<br>
+
 ## Demo
 [Click this link to check the finished interfaces](https://juancumbeq.github.io/platzi-frontend-developer-workshop/)
 
