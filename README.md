@@ -8,7 +8,11 @@
 
 ## COURSE PROYECT
 
-This is the first of four courses where Platzi will guide you step-by-step to build a web application or virtual store.
+Yard Sale is the project I developed during the Frontend Developer practical course at Platzi. It is the layout of an online store, a static webpage built with HTML and CSS, with the main goal of solidifying the fundamental knowledge of frontend development.
+
+One of the most notable features of the project is its focus on responsive design, ensuring proper display and functionality across various devices. Yard Sale includes optimized versions for both desktop and mobile. Below, you can find the prototypes for both versions. 📱💻
+
+Also, this is the first of four courses where Platzi will guide you step-by-step to build a web application or virtual store.
 
 - Layout Design → you are here
 - React
